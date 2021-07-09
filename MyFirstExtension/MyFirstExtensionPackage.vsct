@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Include href="KnownImageIds.vsct"/>
+
+  <Commands package="guidMyFirstExtensionPackage">
+    
+    <Buttons>
+      
+      <Button guid="guidMyFirstExtensionPackageCmdSet" id="MyToolWindowCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1"/>
+        <Icon guid="ImageCatalogGuid" id="Save" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <Strings>
+          <ButtonText>My Tool Window</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidMyFirstExtensionPackage" value="{4f44aa2e-8ab4-413b-9dfd-549c86579db4}" />
+
+    <GuidSymbol name="guidMyFirstExtensionPackageCmdSet" value="{37a79460-7a7b-4ac4-8a24-92b44f9eabe7}">
+      <IDSymbol name="MyToolWindowCommandId" value="0x0100" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
